@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/images/icon.png">
+    <title>MapMixer</title>
+</head>
+
+<body>
+    <div class="bg-img"></div>
+
+    <div class="options-menu title-box">
+        <p>
+            <b>MapMixer</b><br />A randomized orienteering map generator.
+        </p>
+        <p class="right-align">
+            <a href="https://jakevk.com">Creator</a> |
+            <a href="https://github.com/JakevK/MapMixer">Github</a>
+        </p>
+    </div>
+    <div id="map" class="map-container">
+        <canvas id="canvas"></canvas>
+        <img class="loader" id="loader" src="./images/loader.gif" alt="Loading...">
+    </div>
+    <div class="options-menu">
+        <div>
+            <label for="terrain-type">Terrain type:</label>
+            <select name="terrain-type" id="terrain-type-dropdown">
+                <option value="forest">Forest</option>
+                <option value="farmland">Farmland</option>
+            </select>
+        </div>
+        <div>
+            <input type="checkbox" checked id="include-course-checkbox" name="include-course" value="include-course">
+            <label for="include-course-checkbox">Include course</label>
+        </div>
+        <button id="generate-map-btn">Generate Map</button>
+    </div>
+    <script src="index.js" type="module"></script>
+</body>
+
+</html>
